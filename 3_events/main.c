@@ -1,4 +1,5 @@
-// Program to display a bitmap image
+// Program to display a bitmap image until a window close
+// event is triggered.
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -63,7 +64,6 @@ void apply_surface(int x, int y, SDL_Surface *src, SDL_Surface *dest) {
 int main(int argc, char *argv[]) {
 
 	init();
-
 	load_res();
 	window_surface = SDL_GetWindowSurface(window);
 
@@ -74,7 +74,16 @@ int main(int argc, char *argv[]) {
 
 	SDL_UpdateWindowSurface(window);
 
-	SDL_Delay(3000);
+	SDL_Event event;
+	bool loop = true;
+	while(loop) {
+		// For each event in the queue
+		while(SDL_PollEvent(&event) != 0) {
+			if(event.type == SDL_QUIT) {
+				loop = false;
+			}
+		}
+	}
 
 	quit();
 
