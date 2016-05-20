@@ -55,7 +55,7 @@ bool init() {
 
 // Load resources
 bool load_res() {
-
+	load_optimized_image(&contra_surface, "contra.bmp");
 	return true;
 }
 
@@ -70,6 +70,7 @@ void quit() {
 int main() {
 
 	init();
+	//window_surface = SDL_GetWindowSurface(window);
 	load_res();
 
 	// Display image (streched to screen width and height)
@@ -78,10 +79,8 @@ int main() {
 	strech_rect.y = 0;
 	strech_rect.w = WIDTH;
 	strech_rect.h = HEIGHT;
-	SDL_BlitSurface(contra_surface, NULL, window_surface, NULL);
 
-	//SDL_BlitScaled(contra_surface, NULL, window_surface, &strech_rect);
-	//SDL_FillRect(window_surface, NULL, SDL_MapRGB(window_surface->format, 255, 255, 255));
+	SDL_BlitScaled(contra_surface, NULL, window_surface, &strech_rect);
 	SDL_UpdateWindowSurface(window);
 
 	SDL_Delay(3000);
