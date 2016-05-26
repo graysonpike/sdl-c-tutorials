@@ -7,8 +7,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#define WIDTH 640
-#define HEIGHT 480
+#define WIDTH 200
+#define HEIGHT 200
 
 SDL_Window *window = NULL;
 SDL_Surface *window_surface = NULL;
