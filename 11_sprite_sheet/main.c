@@ -1,4 +1,4 @@
-// Example of SDK2
+// Example of multiple sprites from a single image
 
 #include <stdio.h>
 #include <stdlib.h>
