@@ -81,26 +81,23 @@ void load_res() {
 	// Set top left sprite
 	sprite_sections[0].x =   0;
 	sprite_sections[0].y =   0;
-	sprite_sections[0].w = 100;
-	sprite_sections[0].h = 100;
 
 	// Set top right sprite
 	sprite_sections[1].x = 100;
 	sprite_sections[1].y =   0;
-	sprite_sections[1].w = 100;
-	sprite_sections[1].h = 100;
 	
 	// Set bottom left sprite
 	sprite_sections[2].x =   0;
 	sprite_sections[2].y = 100;
-	sprite_sections[2].w = 100;
-	sprite_sections[2].h = 100;
 
 	// Set bottom right sprite
 	sprite_sections[3].x = 100;
 	sprite_sections[3].y = 100;
-	sprite_sections[3].w = 100;
-	sprite_sections[3].h = 100;
+
+	for(int i = 0; i < 4; i ++) {
+		sprite_sections[i].w = 100;
+		sprite_sections[i].h = 100;
+	}
 
 	load_texture(&sprite_sheet, "sprites.png", true);
 }
