@@ -1,1 +1,9 @@
+# Ignore all
+*
+# Unignore all with file extensions
+!*.*
+# Unignore all dirs
+!*/
+
+## Above ignores all files without extensions (binaries) ##
 *.o
