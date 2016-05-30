@@ -7,3 +7,4 @@
 
 ## Above ignores all files without extensions (binaries) ##
 *.o
+Makefile
