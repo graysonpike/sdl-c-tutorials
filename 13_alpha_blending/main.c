@@ -87,6 +87,8 @@ void quit() {
 	// Destroy window and assoicated surface
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
+	SDL_DestroyTexture(background);
+	SDL_DestroyTexture(contra);
 	IMG_Quit();
 	SDL_Quit();
 }
