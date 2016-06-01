@@ -7,4 +7,5 @@
 
 ## Above ignores all files without extensions (binaries) ##
 *.o
+*.DS_Store
 !Makefile
